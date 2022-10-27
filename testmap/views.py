@@ -7,7 +7,7 @@ with open('mysite\static\IKSAN_Data.csv') as csvfile:
     for i in lines:
         IKSAN.append(i)
 
-data = IKSAN[1:11]
+data = IKSAN[1:]
 
 def index(request):
-    return render(request, 'testmap/index.html', {'Data':data})
+    return render(request, 'testmap/index.html', {'data':data})
